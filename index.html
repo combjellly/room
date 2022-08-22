@@ -38,7 +38,21 @@
 <script src="BJMTLLoader.js"></script>
 <script src="Detector.js"></script>
 <script src="OBJMTLLoader.js"></script>
+    
+  <script>
 
+let src = 'd.mp3';
+let audio = new Audio(src);
+
+audio.addEventListener("canplaythrough", () => {
+   audio.play().catch(e => {
+      window.addEventListener('click', () => {
+         audio.play()
+      }, { once: true })
+   })
+});
+
+</script>
 
     <script>
 
